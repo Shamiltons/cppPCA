@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8)
+project( PCAstuff )
+find_package (Eigen3 3.3 REQUIRED NO_MODULE)
+find_package (Threads)
+set (CMAKE_CXX_STANDARD 14)
+find_package( OpenCV REQUIRED )
+add_executable( PCAstuff  main.cpp)
+target_link_libraries( PCAstuff ${CMAKE_THREAD_LIBS_INIT} Eigen3::Eigen)
